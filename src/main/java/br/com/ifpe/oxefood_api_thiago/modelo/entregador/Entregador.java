@@ -1,6 +1,7 @@
 package br.com.ifpe.oxefood_api_thiago.modelo.entregador;
 
 import br.com.ifpe.oxefood_api_thiago.util.entity.EntidadeAuditavel;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -30,6 +31,7 @@ public class Entregador extends EntidadeAuditavel  {
     private String rg;
 
     @Column
+    @JsonFormat
     private LocalDate dataNascimento;
 
     @Column

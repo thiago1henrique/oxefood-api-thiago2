@@ -2,6 +2,7 @@ package br.com.ifpe.oxefood_api_thiago.api.entregador;
 
 import br.com.ifpe.oxefood_api_thiago.modelo.entregador.Entregador;
 import br.com.ifpe.oxefood_api_thiago.modelo.entregador.EntregadorService;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -34,5 +35,11 @@ public class EntregadorController {
         return entregadorService.obterPorID(id);
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Entregador> update(@PathVariable("id") Long id, @RequestBody EntregadorRequest request) {
+
+        entregadorService.update(id, request.build());
+        return ResponseEntity.ok().build();
+    }
 
 }
