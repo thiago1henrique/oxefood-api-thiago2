@@ -20,7 +20,6 @@ public class ClienteController {
 
     @PostMapping
     public ResponseEntity<Cliente> save(@RequestBody ClienteRequest request) {
-
         Cliente cliente = clienteService.save(request.build());
         return new ResponseEntity<Cliente>(cliente, HttpStatus.CREATED);
     }
@@ -41,6 +40,14 @@ public class ClienteController {
         clienteService.update(id, request.build());
         return ResponseEntity.ok().build();
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+
+        clienteService.delete(id);
+        return ResponseEntity.ok().build();
+    }
+
 
 
 }

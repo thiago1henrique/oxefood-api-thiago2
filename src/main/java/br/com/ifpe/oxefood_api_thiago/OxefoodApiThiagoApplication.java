@@ -12,4 +12,6 @@ public class OxefoodApiThiagoApplication {
 		SpringApplication.run(OxefoodApiThiagoApplication.class, args);
 	}
 
+
+
 }
