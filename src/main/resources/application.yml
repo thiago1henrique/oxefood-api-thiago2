@@ -1,8 +1,10 @@
 spring:
   application:
-    name: oxefood-api-debora
+    name: oxefood-api-thiago
   config:
     import: "optional:file:.env[.properties]"
+  main:
+    allow-bean-definition-overriding: true  # MOVIDO para dentro do spring
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5437/oxefood
@@ -17,7 +19,7 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         temp:
           use_jdbc_metadata_defaults: false
-    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     generate-ddl: true
 
 server:

@@ -8,10 +8,10 @@
 		<version>3.4.10-SNAPSHOT</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.ifpe</groupId>
-	<artifactId>oxefood-api-debora</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>oxefood-api-debora</name>
+    <groupId>br.com.ifpe.oxefood</groupId>
+    <artifactId>oxefood-api-thiago</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>oxefood-api-thiago</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
